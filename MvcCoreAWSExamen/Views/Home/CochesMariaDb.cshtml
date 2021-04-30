@@ -1,0 +1,18 @@
+﻿@model List<Coche>
+
+@if (Model != null)
+{
+    @foreach (Coche c in Model)
+    {
+        <h1>Identificador: @c.IdCoche</h1>
+        <h2>Marca: @c.Marca</h2>
+        <h2>Modelo: @c.Modelo</h2>
+        <h2>Conductor: @c.Conductor</h2>
+        <h2>Imagen:<img src="@c.Imagen" width="200"/></h2>
+    }
+}
+else
+{
+    <h1>No hay coches disponibles.</h1>
+    <h2>Compruebe la conexión con MariaDb y que tiene datos.</h2>
+}
